@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GOLDEPUS.Bll</RootNamespace>
-    <AssemblyName>GOLDEPUS</AssemblyName>
+    <AssemblyName>GOLDEPUS.Bll</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
