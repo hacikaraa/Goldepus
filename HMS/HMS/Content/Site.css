@@ -1,0 +1,16 @@
+﻿body {
+    padding-top: 50px;
+}
+
+#FixedHeader {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+#FixedMenu{
+        position: fixed;
+    bottom: 0;
+    top: 0;
+}

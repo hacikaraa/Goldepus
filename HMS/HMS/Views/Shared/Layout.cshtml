@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ev Yönetim Sistemi | @ViewBag.Title</title>
+
+    <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/dist/css/skins/skin-blue.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="" rel="stylesheet" type="text/css" />
+
+    <script src="~/Content/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Content/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <script src="~/Content/plugins/fastclick/fastclick.min.js"></script>
+    <script src="~/Content/dist/js/app.min.js"></script>
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <script>
+        function Logout() {
+            if (confirm('Çıkmak İstediğinize Emin Misiniz')) {
+                location = "/Panel/Logout";
+            }
+        }
+    </script>
+</head>
+<body class="skin-blue">
+
+    <div class="wrapper">
+        @Html.Action("Header", "Panel")
+        @Html.Action("Menu", "Panel")
+
+        <div class="content-wrapper">
+            <section class="content-header" id="messageBox">
+                @*Burada mesajlar için view oluşturulacak*@
+            </section>
+            <div style="padding:5px;margin-top: -25px;">
+                @RenderBody()
+            </div>
+        </div>
+        @Html.Partial("Master/Footer")
+    </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+H:\HK-Projeler\Library\Aybala\Aybala.Tool\Aybala.UTest\bin\Debug\Aybala.UTest.dll
+H:\HK-Projeler\Library\Aybala\Aybala.Tool\Aybala.UTest\bin\Debug\Aybala.UTest.pdb
+H:\HK-Projeler\Library\Aybala\Aybala.Tool\Aybala.UTest\bin\Debug\Aybala.Tool.dll
+H:\HK-Projeler\Library\Aybala\Aybala.Tool\Aybala.UTest\bin\Debug\Newtonsoft.Json.dll
+H:\HK-Projeler\Library\Aybala\Aybala.Tool\Aybala.UTest\bin\Debug\Aybala.Tool.pdb
+H:\HK-Projeler\Library\Aybala\Aybala.Tool\Aybala.UTest\bin\Debug\Newtonsoft.Json.xml
+H:\HK-Projeler\Library\Aybala\Aybala.Tool\Aybala.UTest\obj\Debug\Aybala.UTest.csprojResolveAssemblyReference.cache
+H:\HK-Projeler\Library\Aybala\Aybala.Tool\Aybala.UTest\obj\Debug\Aybala.UTest.dll
+H:\HK-Projeler\Library\Aybala\Aybala.Tool\Aybala.UTest\obj\Debug\Aybala.UTest.pdb

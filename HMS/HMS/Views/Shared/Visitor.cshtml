@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html class=" -webkit-">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/_GOLDEPUS/css/login.css"  rel="stylesheet" type="text/css" />
+    <link href="~/Content/DefaultStyle.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+
+<body>
+    <div class="body"></div>
+    <div class="grad">
+        @Html.Partial("~/Views/Shared/Master/WhiteHeader.cshtml")
+    </div>
+    @RenderBody()
+    <script src="~/Content/_GOLDEPUS/js/jquery.js"></script>
+</body>
+</html>

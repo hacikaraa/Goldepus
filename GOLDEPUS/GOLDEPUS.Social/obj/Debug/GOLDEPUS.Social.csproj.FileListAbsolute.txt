@@ -1,0 +1,5 @@
+C:\GOLDEPUS\GOLDEPUS\GOLDEPUS.Social\bin\Debug\GOLDEPUS.Social.dll
+C:\GOLDEPUS\GOLDEPUS\GOLDEPUS.Social\bin\Debug\GOLDEPUS.Social.pdb
+C:\GOLDEPUS\GOLDEPUS\GOLDEPUS.Social\obj\Debug\GOLDEPUS.Social.dll
+C:\GOLDEPUS\GOLDEPUS\GOLDEPUS.Social\obj\Debug\GOLDEPUS.Social.pdb
+C:\GOLDEPUS\GOLDEPUS\GOLDEPUS.Social\obj\Debug\GOLDEPUS.Social.csprojResolveAssemblyReference.cache

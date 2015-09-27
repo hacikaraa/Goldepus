@@ -1,0 +1,35 @@
+﻿@model ProjeYapisi.Models.LoginModel
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (ViewBag.status != null)
+    {
+        <div class="@ViewBag.status">@ViewBag.info</div>
+        <script>setTimeout(function () { $(".@ViewBag.status").fadeOut(3000); }, 2000)</script>
+        if (ViewBag.status == "success")
+        {
+             <meta http-equiv='refresh' content='3;URL=/Home'>
+        }
+    }
+@using (Html.BeginForm("Login", "Account", FormMethod.Post))
+{
+    <div class="editor-label left">
+        @Html.LabelFor(u => u.Email)
+    </div>
+    <div class="editor-field left">
+        @Html.TextBoxFor(u => u.Email)
+        @Html.ValidationMessageFor(u => u.Email)
+    </div>
+    <div class="editor-label left">
+        @Html.LabelFor(u => u.Password)
+    </div>
+    <div class="editor-field left">
+        @Html.PasswordFor(u => u.Password)
+        @Html.ValidationMessageFor(u => u.Password)
+    </div>
+    <div class="editor-label left"></div>
+    <div class="editor-field left">
+        <input type="submit" value="Giriş" class="button"/>
+    </div>
+}

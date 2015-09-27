@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Giriş Yap";
+    Layout = "~/Views/Shared/Visitor.cshtml";
+}
+
+<script>
+    function Login() {
+        var dto = { "username": $('#username').val(), "password": $('#password').val() };
+        $.ajax({
+            type: "post",
+            url: "Home/Login",
+            contenttype: "application/json; charset=utf-8",
+            data: dto,       
+            success: function (result) {
+                if (result.Result) {
+                    location = "/Panel";
+                } else {
+                    alert(result.Message);
+                }
+            },
+            error: function (result) {
+                alert("Üzgünüz Bir Hata Oluştu.");
+            }
+        });
+    }
+</script>
+
+<div class="header">
+    <div>Giriş<span>Yapın</span></div>
+</div>
+<br>
+
+<div class="login">
+    <input type="text" placeholder="Kullanıcı Adı" name="username" id="username"><br>
+    <input type="password" placeholder="Parola" name="password" id="password"><br>
+    <!--
+        capcha ekleneck
+    -->
+    <input type="button" value="Giriş" onclick="Login(); return false;">
+</div>

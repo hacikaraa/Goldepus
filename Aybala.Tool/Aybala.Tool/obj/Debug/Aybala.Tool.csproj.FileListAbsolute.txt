@@ -1,0 +1,14 @@
+H:\HK-Projeler\Library\Aybala\Aybala.Tool\Aybala.Tool\bin\Debug\Aybala.Tool.dll
+H:\HK-Projeler\Library\Aybala\Aybala.Tool\Aybala.Tool\bin\Debug\Aybala.Tool.pdb
+H:\HK-Projeler\Library\Aybala\Aybala.Tool\Aybala.Tool\bin\Debug\Newtonsoft.Json.dll
+H:\HK-Projeler\Library\Aybala\Aybala.Tool\Aybala.Tool\bin\Debug\Newtonsoft.Json.xml
+H:\HK-Projeler\Library\Aybala\Aybala.Tool\Aybala.Tool\obj\Debug\Aybala.Tool.dll
+H:\HK-Projeler\Library\Aybala\Aybala.Tool\Aybala.Tool\obj\Debug\Aybala.Tool.pdb
+C:\GOLDEPUS\Aybala.Tool\Aybala.Tool\obj\Debug\Aybala.Tool.dll
+C:\GOLDEPUS\Aybala.Tool\Aybala.Tool\obj\Debug\Aybala.Tool.pdb
+C:\GOLDEPUS\Aybala.Tool\Aybala.Tool\bin\Debug\Aybala.Tool.dll
+C:\GOLDEPUS\Aybala.Tool\Aybala.Tool\bin\Debug\Aybala.Tool.pdb
+C:\GOLDEPUS\Aybala.Tool\Aybala.Tool\bin\Debug\Newtonsoft.Json.dll
+C:\GOLDEPUS\Aybala.Tool\Aybala.Tool\bin\Debug\Newtonsoft.Json.xml
+C:\GOLDEPUS\Aybala.Tool\Aybala.Tool\obj\Debug\Aybala.Tool.csproj.ResolveComReference.cache
+C:\GOLDEPUS\Aybala.Tool\Aybala.Tool\obj\Debug\Aybala.Tool.csprojResolveAssemblyReference.cache

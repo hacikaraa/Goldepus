@@ -1,0 +1,84 @@
+﻿@model HMS.Models.HomeMembersModel
+@{
+    ViewBag.Title = "Ev Sakinleri";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<style>
+    ul, ol {
+        list-style-type: none;
+    }
+
+    .stories-section ul li:hover {
+        box-shadow: 0px 0px 6px 0px #ccc;
+    }
+
+    .stories-section ul li {
+        width: 250px;
+        margin: 40px 20px 0px;
+        border-radius: 5px;
+        background-color: #fff;
+        float: left;
+        transition: all 0.3s ease-in;
+        -moz-transition: all 0.3s ease-in;
+        -o-transition: all 0.3s ease-in;
+        -ms-transition: all 0.3s ease-in;
+        -webkit-transition: all 0.3s ease-in;
+    }
+
+        .stories-section ul li a {
+            text-decoration: none;
+        }
+
+    .story-img img {
+        width: 250px;
+        height: 200px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .story-box {
+        border: 1px solid #ccc;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top: none;
+        text-align: center;
+        padding: 10px 0px 20px;
+    }
+
+        .story-box h4 {
+            color: #4E4F4F;
+            font-size: 16px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            line-height: 50px;
+        }
+
+        .story-box p {
+            color: #888;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+</style>
+
+<div class="stories-section">
+    @if (Model.Users != null && Model.Users.Count > 0)
+    {
+        <ul>
+            @for (int i = 0; i < Model.Users.Count; i++)
+            {
+                <li>
+                    <a href="#">
+                        <div class="story-img"><img src="@Model.Users[i].ImagePath"></div>
+                        <div class="story-box">
+                            <h4>@Model.Users[i].Name</h4>
+                            <p>@Model.Users[i].Description</p>
+                        </div>
+                    </a>
+                </li>
+            }
+        </ul>
+    }
+</div>

@@ -1,0 +1,7 @@
+H:\HK-Projeler\Library\Aybala\Aybala.Tool\Aybala.Tool\bin\Release\Aybala.Tool.dll
+H:\HK-Projeler\Library\Aybala\Aybala.Tool\Aybala.Tool\bin\Release\Aybala.Tool.pdb
+H:\HK-Projeler\Library\Aybala\Aybala.Tool\Aybala.Tool\bin\Release\Newtonsoft.Json.dll
+H:\HK-Projeler\Library\Aybala\Aybala.Tool\Aybala.Tool\bin\Release\Newtonsoft.Json.xml
+H:\HK-Projeler\Library\Aybala\Aybala.Tool\Aybala.Tool\obj\Release\Aybala.Tool.csprojResolveAssemblyReference.cache
+H:\HK-Projeler\Library\Aybala\Aybala.Tool\Aybala.Tool\obj\Release\Aybala.Tool.dll
+H:\HK-Projeler\Library\Aybala\Aybala.Tool\Aybala.Tool\obj\Release\Aybala.Tool.pdb

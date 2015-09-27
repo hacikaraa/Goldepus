@@ -1,0 +1,47 @@
+﻿html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.ContainerHeader {
+    height: 50px;
+    padding: 10px 30px;
+}
+
+.UserLink {
+    border: none;
+    text-transform: uppercase;
+    color: #555;
+    font-weight: 700;
+    box-shadow: none;
+    font-size: 14px;
+    float: right;
+    margin: 0px 10px;
+    line-height: 50px;
+    text-decoration: none;
+}
+
+.UserLink:hover{text-decoration: underline;}
+
+.Slider {
+    height: 550px;
+    width: 100%;
+    background-image: url('images/cover-image-1.jpg');
+    background-position-x: center;
+}
+
+.Logo{
+    
+    text-transform: uppercase;
+    color: #555;
+    font-weight: 900;
+    line-height:50px;
+}

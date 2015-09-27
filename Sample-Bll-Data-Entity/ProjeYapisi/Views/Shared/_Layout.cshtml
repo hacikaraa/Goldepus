@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/themes/css/reset.css")
+    @Styles.Render("~/Content/themes/css/font.css")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div id="HeaderWrapper">
+        <div id="HeaderContent" class="center">
+            <div id="logo" class="left"></div>
+            <div id="menu" class="right">
+                <ul class="right">
+                    <li class="right"><a href="/Account/Login"><i data-icon="&#xf023;"></i>Giriş</a></li>
+                    <li class="right"><a href="/Account/Register"><i data-icon="&#xe602;"></i>Üye Ol</a></li>
+                    <li class="right"><a href="/Note"><i data-icon="&#xf003;"></i>Notlarım</a></li>
+                    <li class="right"><a href="/Home" id="activeMenu"><i data-icon="&#xe600;"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="Content" class="center">
+        @RenderBody()
+    </div>
+    <div id="FooterWrapper"></div>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
