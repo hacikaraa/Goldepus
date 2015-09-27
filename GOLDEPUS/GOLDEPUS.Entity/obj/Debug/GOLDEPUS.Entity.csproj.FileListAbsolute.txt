@@ -5,3 +5,10 @@ C:\GOLDEPUS\GOLDEPUS\GOLDEPUS.Entity\bin\Debug\EntityFramework.dll
 C:\GOLDEPUS\GOLDEPUS\GOLDEPUS.Entity\bin\Debug\EntityFramework.SqlServer.dll
 C:\GOLDEPUS\GOLDEPUS\GOLDEPUS.Entity\obj\Debug\GOLDEPUS.Entity.dll
 C:\GOLDEPUS\GOLDEPUS\GOLDEPUS.Entity\obj\Debug\GOLDEPUS.Entity.pdb
+C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Entity\bin\Debug\GOLDEPUS.Entity.dll.config
+C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Entity\bin\Debug\GOLDEPUS.Entity.dll
+C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Entity\bin\Debug\GOLDEPUS.Entity.pdb
+C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Entity\bin\Debug\EntityFramework.dll
+C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Entity\bin\Debug\EntityFramework.SqlServer.dll
+C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Entity\obj\Debug\GOLDEPUS.Entity.dll
+C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Entity\obj\Debug\GOLDEPUS.Entity.pdb

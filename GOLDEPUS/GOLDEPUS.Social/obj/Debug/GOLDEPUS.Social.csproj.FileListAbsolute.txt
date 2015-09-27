@@ -3,3 +3,8 @@ C:\GOLDEPUS\GOLDEPUS\GOLDEPUS.Social\bin\Debug\GOLDEPUS.Social.pdb
 C:\GOLDEPUS\GOLDEPUS\GOLDEPUS.Social\obj\Debug\GOLDEPUS.Social.dll
 C:\GOLDEPUS\GOLDEPUS\GOLDEPUS.Social\obj\Debug\GOLDEPUS.Social.pdb
 C:\GOLDEPUS\GOLDEPUS\GOLDEPUS.Social\obj\Debug\GOLDEPUS.Social.csprojResolveAssemblyReference.cache
+C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Social\bin\Debug\GOLDEPUS.Social.dll
+C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Social\bin\Debug\GOLDEPUS.Social.pdb
+C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Social\obj\Debug\GOLDEPUS.Social.csprojResolveAssemblyReference.cache
+C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Social\obj\Debug\GOLDEPUS.Social.dll
+C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Social\obj\Debug\GOLDEPUS.Social.pdb

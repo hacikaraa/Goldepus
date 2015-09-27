@@ -89,7 +89,7 @@
       <Project>{31e05a3d-d93c-49ad-a185-f8407807e46f}</Project>
       <Name>GOLDEPUS.Entity</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GOLDEPUS\GOLDEPUS\GOLDEPUS.Bll.csproj">
+    <ProjectReference Include="..\GOLDEPUS\GOLDEPUS.Bll\GOLDEPUS.Bll.csproj">
       <Project>{7379ef47-9c94-4d1b-87a9-16423a96c250}</Project>
       <Name>GOLDEPUS.Bll</Name>
     </ProjectReference>

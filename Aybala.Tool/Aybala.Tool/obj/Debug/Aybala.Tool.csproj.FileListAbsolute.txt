@@ -12,3 +12,11 @@ C:\GOLDEPUS\Aybala.Tool\Aybala.Tool\bin\Debug\Newtonsoft.Json.dll
 C:\GOLDEPUS\Aybala.Tool\Aybala.Tool\bin\Debug\Newtonsoft.Json.xml
 C:\GOLDEPUS\Aybala.Tool\Aybala.Tool\obj\Debug\Aybala.Tool.csproj.ResolveComReference.cache
 C:\GOLDEPUS\Aybala.Tool\Aybala.Tool\obj\Debug\Aybala.Tool.csprojResolveAssemblyReference.cache
+C:\GIT\GOLDEPUS\Aybala.Tool\Aybala.Tool\bin\Debug\Aybala.Tool.dll
+C:\GIT\GOLDEPUS\Aybala.Tool\Aybala.Tool\bin\Debug\Aybala.Tool.pdb
+C:\GIT\GOLDEPUS\Aybala.Tool\Aybala.Tool\bin\Debug\Newtonsoft.Json.dll
+C:\GIT\GOLDEPUS\Aybala.Tool\Aybala.Tool\bin\Debug\Newtonsoft.Json.xml
+C:\GIT\GOLDEPUS\Aybala.Tool\Aybala.Tool\obj\Debug\Aybala.Tool.csprojResolveAssemblyReference.cache
+C:\GIT\GOLDEPUS\Aybala.Tool\Aybala.Tool\obj\Debug\Aybala.Tool.csproj.ResolveComReference.cache
+C:\GIT\GOLDEPUS\Aybala.Tool\Aybala.Tool\obj\Debug\Aybala.Tool.dll
+C:\GIT\GOLDEPUS\Aybala.Tool\Aybala.Tool\obj\Debug\Aybala.Tool.pdb
