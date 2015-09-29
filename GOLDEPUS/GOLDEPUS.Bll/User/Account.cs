@@ -19,7 +19,7 @@ namespace GOLDEPUS.Bll.User
             {
                 if (AString.IsNotEmpty(username, password))
                 {
-                    var user = base.DBAction.Select(w => (w.AccountName == username || w.Email == username) && w.AccountPasword == MD5.MD5Create(password));
+                    var user = base.DBAction.Select(w => (w.AccountName == username || w.Email == username) && w.AccountPasword == password);
                     if (user != null && user.Count() > 0)
                     {
                         oResult.Result = true;
@@ -72,7 +72,7 @@ namespace GOLDEPUS.Bll.User
 
                         Entity.User.Account _account = new Entity.User.Account();
                         _account.AccountName = userName;
-                        _account.AccountPasword = MD5.MD5Create(password);
+                        _account.AccountPasword = password;
                         _account.Email = eMail;
                         _account.Name = name;
 
