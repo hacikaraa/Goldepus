@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace GOLDEPUS.Bll.Finance
 {
-    internal class CorporationExpenses : Base.Base
+    internal class CorporationExpenses : Base.Base<Entity.Finance.CorporationExpenses>
     {
-
+        public CorporationExpenses(Entity.DBEngine.UnitOfWorks DataProcess) : base(DataProcess) { }
     }
 }

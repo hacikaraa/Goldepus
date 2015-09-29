@@ -6,11 +6,19 @@ using System.Threading.Tasks;
 
 namespace GOLDEPUS.Bll.Monitoring
 {
-    internal class ExceptionLog : Base.Base
+    internal class ExceptionLog : Base.Base<Entity.Monitoring.ExceptionLog>
     {
-        public void CreateExceptionLog(Entity.Monitoring.ExceptionLog exlog)
+        public ExceptionLog(Entity.DBEngine.UnitOfWorks DataProcess) : base(DataProcess) { }
+
+        public void CreateLog(Entity.Monitoring.ExceptionLog exlog)
         {
-            base.Dal.Monitoring.CreateExceptionLog(exlog);
+            try
+            {
+                base.DBAction.Insert(ref exlog);
+                DataProcess.Save();
+            }
+            catch (Exception)
+            {; }
         }
     }
 }

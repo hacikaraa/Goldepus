@@ -8,77 +8,107 @@ using Aybala.Tool.Cryptology;
 
 namespace GOLDEPUS.Bll.User
 {
-    internal class Account : Base.Base
+    internal class Account : Base.Base<Entity.User.Account>
     {
-        public ResultObject<Entity.User.Account> Login(string username,string password)
-        {
-            ResultObject<Entity.User.Account>  oResult = new ResultObject<Entity.User.Account>();
-            if (AString.IsNotEmpty(username,password))
-            {
-                var user = Dal.User.Login(username, MD5.MD5Create(password));
-                if(user != null && user.Id > 0)
-                {
-                    oResult.Result = true;
-                    oResult.Value = user;
-                }
-                else
-                {
-                    oResult.Result = false;
-                    oResult.Message = "Kullanıcı Adı ve Parolanızı Kontrol Edin";
-                }
-            }
-            else
-            {
-                oResult.Message = "Kullanıcı Adı ve Parola Boş Girilemez";
-                oResult.Result = false;
-            }
-            return oResult;
-        }
+        public Account(Entity.DBEngine.UnitOfWorks DataProcess) : base(DataProcess) { }
 
-        public ResultObject<string> Register(string userName, string password, string eMail, string name)
+        public ResultObject<Entity.User.Account> Login(string username, string password)
         {
-            ResultObject<string>  oResult = new ResultObject<string>();
-            if (AString.IsNotEmpty(userName,password,eMail))
+            ResultObject<Entity.User.Account> oResult = new ResultObject<Entity.User.Account>();
+            try
             {
-                if (ARegex.IsMailFormat(eMail))
+                if (AString.IsNotEmpty(username, password))
                 {
-                    GOLDEPUS.Dal.Base.RegisterResult result = base.Dal.User.Register(userName, MD5.MD5Create(password), eMail, name);
-                    switch (result)
+                    var user = base.DBAction.Select(w => (w.AccountName == username || w.Email == username) && w.AccountPasword == MD5.MD5Create(password));
+                    if (user != null && user.Count() > 0)
                     {
-                        case GOLDEPUS.Dal.Base.RegisterResult.UserNameAlreadyExist:
-                            oResult.Message = "Bu Kullanıcı Adı Zaten Kayıtlı";
-                            oResult.Result = false;
-                            break;
-                        case GOLDEPUS.Dal.Base.RegisterResult.EMailAlreadyExist:
-                            oResult.Message = "Bu Email Zaten Kayıtlı";
-                            oResult.Result = false;
-                            break;
-                        case GOLDEPUS.Dal.Base.RegisterResult.Successful:
-                            oResult.Message = "Kullanıcı Kaydı Gerçekleştirilmiştir.";
-                            oResult.Result = true;
-                            //buraya mail gönderme eklenecek onay veya hoşgeldin maili
-                            break;
-                        case GOLDEPUS.Dal.Base.RegisterResult.UnknowError:
-                            oResult.Message = "Üzgünüz Bir Hata Oluştu";
-                            oResult.Result = false;
-                            break;
+                        oResult.Result = true;
+                        oResult.Value = user.FirstOrDefault();
+                    }
+                    else
+                    {
+                        oResult.Result = false;
+                        oResult.Message = "Kullanıcı Adı ve Parolanızı Kontrol Edin";
                     }
                 }
                 else
                 {
-                    oResult.Message = "Mail Formata Uygun Değil";
+                    oResult.Message = "Kullanıcı Adı ve Parola Boş Girilemez";
                     oResult.Result = false;
                 }
             }
-            else
+            catch (Exception ex)
             {
-                oResult.Message = "Değerler Boş Girilemez";
+                base.CreateExceptionLog(ex);
                 oResult.Result = false;
+                oResult.Message = "Üzgünüz Bir Hata Oluştu";
             }
             return oResult;
         }
 
+        public ResultObject<Entity.User.Account> Register(string userName, string password, string eMail, string name)
+        {
+            ResultObject<Entity.User.Account> oResult = new ResultObject<Entity.User.Account>();
+            try
+            {
+                if (AString.IsNotEmpty(userName, password, eMail))
+                {
+                    if (ARegex.IsMailFormat(eMail))
+                    {
+                        var user = base.DBAction.Select(w => w.AccountName == userName).FirstOrDefault();
+                        if (user != null)
+                        {
+                            oResult.Message = "Bu Kullanıcı Adı Zaten Kayıtlı";
+                            oResult.Result = false;
+                            return oResult;
+                        }
+                        user = base.DBAction.Select(w => w.Email == eMail).FirstOrDefault();
+                        if (user != null)
+                        {
+                            oResult.Message = "Bu Email Zaten Kayıtlı";
+                            oResult.Result = false;
+                            return oResult;
+                        }
 
+                        Entity.User.Account _account = new Entity.User.Account();
+                        _account.AccountName = userName;
+                        _account.AccountPasword = MD5.MD5Create(password);
+                        _account.Email = eMail;
+                        _account.Name = name;
 
+                        base.DBAction.Insert(ref _account);
+                        if (base.DataProcess.Save())
+                        {
+                            oResult.Message = "Kullanıcı Kaydı Gerçekleştirilmiştir.";
+                            oResult.Result = true;
+                            oResult.Value = _account;
+                            //buraya mail gönderme eklenecek onay veya hoşgeldin maili
+                        }
+                        else
+                        {
+                            oResult.Message = "Üzgünüz Bir Hata Oluştu";
+                            oResult.Result = false;
+                        }
+                    }
+                    else
+                    {
+                        oResult.Message = "Mail Formata Uygun Değil";
+                        oResult.Result = false;
+                    }
+                }
+                else
+                {
+                    oResult.Message = "Değerler Boş Girilemez";
+                    oResult.Result = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                base.CreateExceptionLog(ex);
+                oResult.Message = "Üzgünüz Belirlenemeyen Bir Hata Oluştu";
+                oResult.Result = false;
+            }
+            return oResult;
+        }
     }
 }

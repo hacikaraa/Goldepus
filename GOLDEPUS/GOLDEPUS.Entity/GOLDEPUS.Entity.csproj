@@ -85,6 +85,11 @@
     <Compile Include="User\Account.cs" />
     <Compile Include="_Base\BaseEntity.cs" />
     <Compile Include="_Base\LogBase.cs" />
+    <Compile Include="_DBEngine\DataContext.cs" />
+    <Compile Include="_DBEngine\IRepository.cs" />
+    <Compile Include="_DBEngine\IUnitOfWork.cs" />
+    <Compile Include="_DBEngine\Repository.cs" />
+    <Compile Include="_DBEngine\UnitOfWorks.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

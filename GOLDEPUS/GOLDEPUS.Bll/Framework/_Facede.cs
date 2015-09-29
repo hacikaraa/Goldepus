@@ -10,38 +10,38 @@ namespace GOLDEPUS.Bll.Framework
     {
         private Category category;
         private Label label;
-        public Facede()
+        public Facede(Entity.DBEngine.UnitOfWorks DataProcess)
         {
-            category = new Category();
-            label = new Label();
+            category = new Category(DataProcess);
+            label = new Label(DataProcess);
         }
 
-        public Entity.Framework.Category GetCategory(int id)
+        public ResultObject<Entity.Framework.Category> GetCategory(int id)
         {
             return this.category.GetCategory(id);
         }
 
-        public Entity.Framework.Category GetCategory(string name)
+        public ResultObject<Entity.Framework.Category> GetCategory(string name)
         {
             return this.category.GetCategory(name);
         }
 
-        public Entity.Framework.Category SaveCategory(string name, int baseCategoryID = 0)
+        public ResultObject<Entity.Framework.Category> SaveCategory(string name, int baseCategoryID = 0)
         {
             return this.category.SaveCategory(name, baseCategoryID);
         }
 
-        public Entity.Framework.Category UpdateCategory(int id, string name, int baseCategoryID = 0)
+        public ResultObject<Entity.Framework.Category> UpdateCategory(int id, string name, int baseCategoryID = 0)
         {
             return this.category.UpdateCategory(id, name, baseCategoryID);
         }
 
-        public List<Entity.Framework.Category> GetBaseCategories()
+        public ResultObject<List<Entity.Framework.Category>> GetBaseCategories()
         {
             return this.category.GetBaseCategories();
         }
 
-        public List<Entity.Framework.Category> GetSubCategories(int categoryId)
+        public ResultObject<List<Entity.Framework.Category>> GetSubCategories(int categoryId)
         {
             return this.category.GetSubCategories(categoryId);
         }
@@ -51,32 +51,32 @@ namespace GOLDEPUS.Bll.Framework
             return this.category.DeleteCategory(id);
         }
 
-        public Entity.Framework.Label GetLabel(int id)
+        public ResultObject<Entity.Framework.Label> GetLabel(int id)
         {
             return this.label.GetLabel(id);
         }
 
-        public Entity.Framework.Label GetLabel(string name)
+        public ResultObject<Entity.Framework.Label> GetLabel(string name)
         {
             return this.label.GetLabel(name);
         }
 
-        public Entity.Framework.Label SaveLabel(string name,string description = "", int categoryId = 0)
+        public ResultObject<Entity.Framework.Label> SaveLabel(string name,string description = "", int categoryId = 0)
         {
             return this.label.SaveLabel(name, description, categoryId);
         }
 
-        public Entity.Framework.Label UpdateLabel(int id, string name, string description, int categoryId = 0)
+        public ResultObject<Entity.Framework.Label> UpdateLabel(int id, string name, string description, int categoryId = 0)
         {
             return this.label.UpdateLabel(id, name, description, categoryId);
         }
 
-        public List<Entity.Framework.Label> GetLabels()
+        public ResultObject<List<Entity.Framework.Label>> GetLabels()
         {
             return this.label.GetLabels();
         }
 
-        public List<Entity.Framework.Label> GetLabels(int categoryId)
+        public ResultObject<List<Entity.Framework.Label>> GetLabels(int categoryId)
         {
             return this.label.GetLabels(categoryId);
         }

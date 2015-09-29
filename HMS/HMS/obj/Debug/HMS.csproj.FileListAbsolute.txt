@@ -73,7 +73,6 @@ C:\GIT\GOLDEPUS\HMS\HMS\bin\System.Web.Razor.dll
 C:\GIT\GOLDEPUS\HMS\HMS\bin\System.Web.Webpages.Deployment.dll
 C:\GIT\GOLDEPUS\HMS\HMS\bin\System.Web.Webpages.dll
 C:\GIT\GOLDEPUS\HMS\HMS\bin\System.Web.Webpages.Razor.dll
-C:\GIT\GOLDEPUS\HMS\HMS\bin\GOLDEPUS.Dal.dll
 C:\GIT\GOLDEPUS\HMS\HMS\bin\Aybala.Tool.dll
 C:\GIT\GOLDEPUS\HMS\HMS\bin\Newtonsoft.Json.dll
 C:\GIT\GOLDEPUS\HMS\HMS\bin\GOLDEPUS.MVC.pdb
@@ -86,7 +85,6 @@ C:\GIT\GOLDEPUS\HMS\HMS\bin\System.Web.Webpages.Deployment.xml
 C:\GIT\GOLDEPUS\HMS\HMS\bin\System.Web.Webpages.Razor.xml
 C:\GIT\GOLDEPUS\HMS\HMS\bin\System.Web.Helpers.xml
 C:\GIT\GOLDEPUS\HMS\HMS\bin\System.Web.Mvc.xml
-C:\GIT\GOLDEPUS\HMS\HMS\bin\GOLDEPUS.Dal.pdb
 C:\GIT\GOLDEPUS\HMS\HMS\bin\Aybala.Tool.pdb
 C:\GIT\GOLDEPUS\HMS\HMS\bin\Newtonsoft.Json.xml
 C:\GIT\GOLDEPUS\HMS\HMS\obj\Debug\HMS.csprojResolveAssemblyReference.cache

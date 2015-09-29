@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace GOLDEPUS.Bll.Formal
 {
-    internal class Corporation : Base.Base
+    internal class Corporation : Base.Base<Entity.Formal.Corporation>
     {
-
+        public Corporation(Entity.DBEngine.UnitOfWorks DataProcess) : base(DataProcess) { }
     }
 }

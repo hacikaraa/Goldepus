@@ -87,15 +87,12 @@
     <Compile Include="User\Account.cs" />
     <Compile Include="User\_Facede.cs" />
     <Compile Include="_Base\Base.cs" />
+    <Compile Include="_Base\Enums.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Aybala.Tool\Aybala.Tool\Aybala.Tool.csproj">
       <Project>{2b07e9f5-ab5e-49f6-bb36-e94a0653c23d}</Project>
       <Name>Aybala.Tool</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GOLDEPUS.Dal\GOLDEPUS.Dal.csproj">
-      <Project>{b5c28a21-af6c-4ddb-a986-e3b524f3211a}</Project>
-      <Name>GOLDEPUS.Dal</Name>
     </ProjectReference>
     <ProjectReference Include="..\GOLDEPUS.Entity\GOLDEPUS.Entity.csproj">
       <Project>{31e05a3d-d93c-49ad-a185-f8407807e46f}</Project>

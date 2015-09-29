@@ -1,31 +1,48 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace GOLDEPUS.Base
 {
-    internal abstract class Base
+    internal abstract class Base<T> where T : class
     {
         private Bll.Facede bll;
         public Bll.Facede Bll
         {
             get
             {
-                if (bll == null) bll = new Bll.Facede();
+                if (bll == null) bll = new Bll.Facede(DataProcess);
                 return bll;
             }
         }
+        
+        public Entity.DBEngine.UnitOfWorks DataProcess { get; private set; }
 
-        private Dal.Facede dal;
-        public Dal.Facede Dal
+        public Base(Entity.DBEngine.UnitOfWorks DataProcess)
+        {
+            this.DataProcess = DataProcess;
+        }
+
+        private Entity.DBEngine.Repository<T> dbaction;
+        public Entity.DBEngine.Repository<T> DBAction
         {
             get
             {
-                if (dal == null) dal = new Dal.Facede();
-                return dal;
+                if (this.dbaction == null) this.dbaction = this.DataProcess.RepositoryFactory<T>();
+                return this.dbaction;
             }
         }
+
+        public void CreateExceptionLog(Exception ex)
+        {
+            Entity.Monitoring.ExceptionLog exlog = new Entity.Monitoring.ExceptionLog();
+            exlog.ExceptionMessage = ex.Message;
+            exlog.ExecuteEntity = this.GetType().FullName;
+            exlog.EntityValue = "";
+            exlog.ExecuteType = "";
+            Bll.Monitoring.CreateExceptionLog(exlog);
+        }
+
+
+
     }
 }

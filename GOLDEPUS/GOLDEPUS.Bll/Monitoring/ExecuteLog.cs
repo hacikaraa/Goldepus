@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace GOLDEPUS.Bll.Monitoring
 {
-    internal class ExecuteLog : Base.Base
+    internal class ExecuteLog : Base.Base<Entity.Monitoring.ExecuteLog>
     {
+        public ExecuteLog(Entity.DBEngine.UnitOfWorks DataProcess) : base(DataProcess) { }
 
     }
 }

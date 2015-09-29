@@ -16,16 +16,16 @@ namespace GOLDEPUS.Bll.Finance
         private MemberRevenues memberRevenues;
         private RevenueItem revenueItem;
         private Revenues revenues;
-        public Facede()
+        public Facede(Entity.DBEngine.UnitOfWorks DataProcess)
         {
-            corporationExpenses = new CorporationExpenses();
-            corporationRevenues = new CorporationRevenues();
-            expenseItem = new ExpenseItem();
-            expenses = new Expenses();
-            memberExpenses = new MemberExpenses();
-            memberRevenues = new MemberRevenues();
-            revenueItem = new RevenueItem();
-            revenues = new Revenues();
+            corporationExpenses = new CorporationExpenses(DataProcess);
+            corporationRevenues = new CorporationRevenues(DataProcess);
+            expenseItem = new ExpenseItem(DataProcess);
+            expenses = new Expenses(DataProcess);
+            memberExpenses = new MemberExpenses(DataProcess);
+            memberRevenues = new MemberRevenues(DataProcess);
+            revenueItem = new RevenueItem(DataProcess);
+            revenues = new Revenues(DataProcess);
         }
     }
 }

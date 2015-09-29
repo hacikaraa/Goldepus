@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace GOLDEPUS.Bll.Catalog
 {
-    internal class ListColumn : Base.Base
+    internal class ListColumn : Base.Base<Entity.Catalog.ListColumns>
     {
-
+        public ListColumn(Entity.DBEngine.UnitOfWorks DataProcess) : base(DataProcess) { }
     }
 }

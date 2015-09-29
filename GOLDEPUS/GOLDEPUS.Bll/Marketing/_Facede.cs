@@ -8,5 +8,9 @@ namespace GOLDEPUS.Bll.Marketing
 {
     public class Facede
     {
+        public Facede(Entity.DBEngine.UnitOfWorks DataProcess)
+        {
+
+        }
     }
 }
