@@ -1,14 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GOLDEPUS.Entity.DBEngine;
+using GOLDEPUS.Entity.Migrations;
+using System.Data.Entity;
+using System.Data.Entity.Migrations;
 
 namespace GOLDEPUS.Bll
 {
     public class Facede
     {
-        public Facede() { }
+        public Facede()
+        {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<DataContext, Configuration>());
+        }
 
         public Facede(Entity.DBEngine.UnitOfWorks dataProcess) { this.dataProcess = dataProcess; }
 
@@ -19,8 +21,9 @@ namespace GOLDEPUS.Bll
             {
                 if (this.dbContext == null)
                 {
-                    this.dbContext = new Entity.DBEngine.DataContext();
-                    this.dbContext.Database.CreateIfNotExists();
+                    this.dbContext = new DataContext();
+                    var dbMigrator = new DbMigrator(new Configuration());
+                    dbMigrator.Update();
                 }
                 return this.dbContext;
             }

@@ -6,7 +6,7 @@ namespace GOLDEPUS.Entity.DBEngine
     {
         public DataContext() : base("DataContext")
         {
-          Database.SetInitializer(new DropCreateDatabaseIfModelChanges<DataContext>());
+            
         }
 
         #region DbSets

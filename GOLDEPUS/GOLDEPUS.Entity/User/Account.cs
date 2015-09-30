@@ -20,6 +20,10 @@ namespace GOLDEPUS.Entity.User
 
         public string ImagePath { get; set; }
 
+        public string PhoneNumber { get; set; }
+
+        public string WebSite { get; set; }
+
         public virtual ICollection<Finance.MemberRevenues> MemberRevenues { get; set; }
 
         public virtual ICollection<Finance.MemberExpenses> MemberExpenses { get; set; }

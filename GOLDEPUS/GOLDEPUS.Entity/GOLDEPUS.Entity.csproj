@@ -15,6 +15,7 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -24,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -32,6 +34,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -78,6 +81,11 @@
     <Compile Include="Marketing\ItemGroups.cs" />
     <Compile Include="Marketing\ItemImages.cs" />
     <Compile Include="Marketing\ItemProperties.cs" />
+    <Compile Include="Migrations\201509301958141_InitialCreate.cs" />
+    <Compile Include="Migrations\201509301958141_InitialCreate.Designer.cs">
+      <DependentUpon>201509301958141_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Monitoring\ExceptionLog.cs" />
     <Compile Include="Monitoring\ExecuteLog.cs" />
     <Compile Include="Monitoring\PerformanceLog.cs" />
@@ -103,6 +111,11 @@
     <Content Include="_Dll\EntityFramework.SqlServer.dll" />
     <Content Include="_Dll\Microsoft.Office.Interop.Excel.dll" />
     <Content Include="_Dll\Newtonsoft.Json.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201509301958141_InitialCreate.resx">
+      <DependentUpon>201509301958141_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
