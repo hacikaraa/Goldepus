@@ -8,7 +8,7 @@ namespace GOLDEPUS.Bll.Content
 {
     public class Facede
     {
-        public Facede(Entity.DBEngine.UnitOfWorks DataProcess)
+        public Facede(Bll.Facede Application)
         {
 
         }

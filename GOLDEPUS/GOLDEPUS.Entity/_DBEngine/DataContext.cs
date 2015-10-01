@@ -29,6 +29,12 @@ namespace GOLDEPUS.Entity.DBEngine
 
         #endregion
 
+        #region Content
+
+        public DbSet<Entity.Content.Country> Countries { get; set; }
+
+        #endregion
+
         #region Finance 
 
         public DbSet<Entity.Finance.CorporationExpenses> CorporationExpenses { get; set; }

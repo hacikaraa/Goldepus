@@ -8,6 +8,6 @@ namespace GOLDEPUS.Bll.Catalog
 {
     internal class List : Base.Base<Entity.Catalog.List>
     {
-        public List(Entity.DBEngine.UnitOfWorks DataProcess) : base(DataProcess) { }
+        public List(Bll.Facede Application) : base(Application) { }
     }
 }

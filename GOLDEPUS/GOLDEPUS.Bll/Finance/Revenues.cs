@@ -8,6 +8,6 @@ namespace GOLDEPUS.Bll.Finance
 {
     internal class Revenues : Base.Base<Entity.Finance.Revenues>
     {
-        public Revenues(Entity.DBEngine.UnitOfWorks DataProcess) : base(DataProcess) { }
+        public Revenues(Bll.Facede Application) : base(Application) { }
     }
 }

@@ -8,7 +8,7 @@ namespace GOLDEPUS.Bll.Monitoring
 {
     internal class ExecuteLog : Base.Base<Entity.Monitoring.ExecuteLog>
     {
-        public ExecuteLog(Entity.DBEngine.UnitOfWorks DataProcess) : base(DataProcess) { }
+        public ExecuteLog(Bll.Facede Application) : base(Application) { }
 
     }
 }

@@ -11,11 +11,11 @@ namespace GOLDEPUS.Bll.Monitoring
         private ExceptionLog exceptionLog;
         private ExecuteLog executeLog;
         private PerformanceLog performanceLog;
-        public Facede(Entity.DBEngine.UnitOfWorks DataProcess)
+        public Facede(Bll.Facede Application)
         {
-            exceptionLog = new ExceptionLog(DataProcess);
-            executeLog = new ExecuteLog(DataProcess);
-            performanceLog = new PerformanceLog(DataProcess);
+            exceptionLog = new ExceptionLog(Application);
+            executeLog = new ExecuteLog(Application);
+            performanceLog = new PerformanceLog(Application);
         }
 
         public void CreateExceptionLog(Entity.Monitoring.ExceptionLog exlog)

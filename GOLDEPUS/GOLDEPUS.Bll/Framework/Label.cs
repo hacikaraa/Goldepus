@@ -8,7 +8,7 @@ namespace GOLDEPUS.Bll.Framework
 {
     internal class Label : Base.Base<Entity.Framework.Label>
     {
-        public Label(Entity.DBEngine.UnitOfWorks DataProcess) : base(DataProcess) { }
+        public Label(Bll.Facede Application) : base(Application) { }
 
         public ResultObject<Entity.Framework.Label> GetLabel(int id)
         {
@@ -75,9 +75,9 @@ namespace GOLDEPUS.Bll.Framework
                     newLabel = new Entity.Framework.Label();
                     ResultObject<Entity.Framework.Category> cResult;
                     if (categoryId == 0)
-                        cResult = base.Bll.Framework.GetCategory("GENEL");
+                        cResult = base.Application.Framework.GetCategory("GENEL");
                     else
-                        cResult = base.Bll.Framework.GetCategory(categoryId);
+                        cResult = base.Application.Framework.GetCategory(categoryId);
                     if (cResult != null && cResult.Result)
                         newLabel.Category = cResult.Value;
                     newLabel.Name = name;
@@ -124,9 +124,9 @@ namespace GOLDEPUS.Bll.Framework
                     if (string.IsNullOrEmpty(description)) description = name;
                     ResultObject<Entity.Framework.Category> cResult;
                     if (categoryId == 0)
-                        cResult = base.Bll.Framework.GetCategory("GENEL");
+                        cResult = base.Application.Framework.GetCategory("GENEL");
                     else
-                        cResult = base.Bll.Framework.GetCategory(categoryId);
+                        cResult = base.Application.Framework.GetCategory(categoryId);
                     if (cResult != null && cResult.Result)
                         uLabel.Category = cResult.Value;
                     uLabel.Name = name;

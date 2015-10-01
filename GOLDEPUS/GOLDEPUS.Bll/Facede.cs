@@ -12,8 +12,6 @@ namespace GOLDEPUS.Bll
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<DataContext, Configuration>());
         }
 
-        public Facede(Entity.DBEngine.UnitOfWorks dataProcess) { this.dataProcess = dataProcess; }
-
         private Entity.DBEngine.DataContext dbContext;
         internal Entity.DBEngine.DataContext DBContext
         {
@@ -44,7 +42,7 @@ namespace GOLDEPUS.Bll
         {
             get
             {
-                if (catalog == null) catalog = new Catalog.Facede(this.DataProcess);
+                if (catalog == null) catalog = new Catalog.Facede(this);
                 return catalog;
             }
         }
@@ -54,7 +52,7 @@ namespace GOLDEPUS.Bll
         {
             get
             {
-                if (content == null) content = new Content.Facede(this.DataProcess);
+                if (content == null) content = new Content.Facede(this);
                 return content;
             }
         }
@@ -64,7 +62,7 @@ namespace GOLDEPUS.Bll
         {
             get
             {
-                if (finance == null) finance = new Finance.Facede(this.DataProcess);
+                if (finance == null) finance = new Finance.Facede(this);
                 return finance;
             }
         }
@@ -74,7 +72,7 @@ namespace GOLDEPUS.Bll
         {
             get
             {
-                if (formal == null) formal = new Formal.Facede(this.DataProcess);
+                if (formal == null) formal = new Formal.Facede(this);
                 return formal;
             }
         }
@@ -84,7 +82,7 @@ namespace GOLDEPUS.Bll
         {
             get
             {
-                if (framework == null) framework = new Framework.Facede(this.DataProcess);
+                if (framework == null) framework = new Framework.Facede(this);
                 return framework;
             }
         }
@@ -94,7 +92,7 @@ namespace GOLDEPUS.Bll
         {
             get
             {
-                if (marketing == null) marketing = new Marketing.Facede(this.DataProcess);
+                if (marketing == null) marketing = new Marketing.Facede(this);
                 return marketing;
             }
         }
@@ -104,7 +102,7 @@ namespace GOLDEPUS.Bll
         {
             get
             {
-                if (monitoring == null) monitoring = new Monitoring.Facede(this.DataProcess);
+                if (monitoring == null) monitoring = new Monitoring.Facede(this);
                 return monitoring;
             }
         }
@@ -114,7 +112,7 @@ namespace GOLDEPUS.Bll
         {
             get
             {
-                if (user == null) user = new User.Facede(this.DataProcess);
+                if (user == null) user = new User.Facede(this);
                 return user;
             }
         }

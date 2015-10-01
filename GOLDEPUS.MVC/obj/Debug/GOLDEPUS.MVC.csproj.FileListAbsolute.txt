@@ -38,8 +38,8 @@ C:\GIT\GOLDEPUS\GOLDEPUS.MVC\bin\Debug\System.Web.Razor.dll
 C:\GIT\GOLDEPUS\GOLDEPUS.MVC\bin\Debug\System.Web.WebPages.Deployment.dll
 C:\GIT\GOLDEPUS\GOLDEPUS.MVC\bin\Debug\System.Web.WebPages.dll
 C:\GIT\GOLDEPUS\GOLDEPUS.MVC\bin\Debug\System.Web.WebPages.Razor.dll
-C:\GIT\GOLDEPUS\GOLDEPUS.MVC\bin\Debug\Aybala.Tool.dll
 C:\GIT\GOLDEPUS\GOLDEPUS.MVC\bin\Debug\EntityFramework.dll
+C:\GIT\GOLDEPUS\GOLDEPUS.MVC\bin\Debug\Aybala.Tool.dll
 C:\GIT\GOLDEPUS\GOLDEPUS.MVC\bin\Debug\Newtonsoft.Json.dll
 C:\GIT\GOLDEPUS\GOLDEPUS.MVC\bin\Debug\GOLDEPUS.Entity.pdb
 C:\GIT\GOLDEPUS\GOLDEPUS.MVC\bin\Debug\GOLDEPUS.Bll.pdb

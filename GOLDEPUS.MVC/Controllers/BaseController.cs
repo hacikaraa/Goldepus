@@ -17,7 +17,18 @@ namespace GOLDEPUS.MVC.Controllers
         {
             get
             {
-                if (bll == null) bll = new GOLDEPUS.Bll.Facede();
+                if (bll == null)
+                {
+                    if (HttpContext.Cache.Get("Application") != null)
+                    {
+                        bll = (GOLDEPUS.Bll.Facede)HttpContext.Cache.Get("Application");
+                    }
+                    else
+                    {
+                        bll = new GOLDEPUS.Bll.Facede();
+                        HttpContext.Cache.Insert("Application", bll);
+                    }
+                } 
                 return bll;
             }
         }

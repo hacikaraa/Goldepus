@@ -11,10 +11,14 @@ namespace GOLDEPUS.Entity.DBEngine
         {
             this.context = context;
         }
-        
+
+        public User.Account ActiveUser { get; set; }
+
+        public bool HasSession { get { return this.ActiveUser != null && this.ActiveUser.Id > 0; } }
+
         public Repository<T> RepositoryFactory<T>() where T : class
         {
-            return new Repository<T>(context);
+            return new Repository<T>(context, this);
         }
 
         public bool Save()
@@ -56,6 +60,6 @@ namespace GOLDEPUS.Entity.DBEngine
         {
             Dispose(true);
             GC.SuppressFinalize(this);
-        }      
+        }
     }
 }

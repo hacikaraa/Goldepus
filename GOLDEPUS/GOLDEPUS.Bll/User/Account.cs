@@ -10,8 +10,8 @@ namespace GOLDEPUS.Bll.User
 {
     internal class Account : Base.Base<Entity.User.Account>
     {
-        public Account(Entity.DBEngine.UnitOfWorks DataProcess) : base(DataProcess) { }
-
+        public Account(Bll.Facede Application) : base(Application) { }
+        
         public ResultObject<Entity.User.Account> Login(string username, string password)
         {
             ResultObject<Entity.User.Account> oResult = new ResultObject<Entity.User.Account>();
@@ -24,6 +24,7 @@ namespace GOLDEPUS.Bll.User
                     {
                         oResult.Result = true;
                         oResult.Value = user.FirstOrDefault();
+                        base.DataProcess.ActiveUser = oResult.Value;
                     }
                     else
                     {
@@ -44,6 +45,11 @@ namespace GOLDEPUS.Bll.User
                 oResult.Message = "Üzgünüz Bir Hata Oluştu";
             }
             return oResult;
+        }
+
+        public void LogOut()
+        {
+            this.DataProcess.ActiveUser = null;
         }
 
         public ResultObject<Entity.User.Account> Register(string userName, string password, string eMail, string name)

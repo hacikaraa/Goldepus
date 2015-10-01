@@ -8,7 +8,7 @@ namespace GOLDEPUS.Bll.Framework
 {
     internal class Category : Base.Base<Entity.Framework.Category>
     {
-        public Category(Entity.DBEngine.UnitOfWorks DataProcess) : base(DataProcess) { }
+        public Category(Bll.Facede Application) : base(Application) { }
 
         public ResultObject<Entity.Framework.Category> GetCategory(int id)
         {

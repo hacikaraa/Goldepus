@@ -10,10 +10,10 @@ namespace GOLDEPUS.Bll.Framework
     {
         private Category category;
         private Label label;
-        public Facede(Entity.DBEngine.UnitOfWorks DataProcess)
+        public Facede(Bll.Facede Application)
         {
-            category = new Category(DataProcess);
-            label = new Label(DataProcess);
+            category = new Category(Application);
+            label = new Label(Application);
         }
 
         public ResultObject<Entity.Framework.Category> GetCategory(int id)

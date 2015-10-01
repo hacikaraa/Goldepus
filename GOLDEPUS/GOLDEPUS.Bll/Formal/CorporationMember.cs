@@ -8,6 +8,6 @@ namespace GOLDEPUS.Bll.Formal
 {
     internal class CorporationMember : Base.Base<Entity.Formal.CorporationMember>
     {
-        public CorporationMember(Entity.DBEngine.UnitOfWorks DataProcess) : base(DataProcess) { }
+        public CorporationMember(Bll.Facede Application) : base(Application) { }
     }
 }

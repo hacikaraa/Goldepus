@@ -10,10 +10,10 @@ namespace GOLDEPUS.Bll.Formal
     {
         private Corporation corporation;
         private CorporationMember corporationMember;
-        public Facede(Entity.DBEngine.UnitOfWorks DataProcess)
+        public Facede(Bll.Facede Application)
         {
-            corporation = new Corporation(DataProcess);
-            corporationMember = new CorporationMember(DataProcess);
+            corporation = new Corporation(Application);
+            corporationMember = new CorporationMember(Application);
         }
     }
 }

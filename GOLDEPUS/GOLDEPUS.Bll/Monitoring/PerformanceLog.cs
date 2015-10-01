@@ -8,6 +8,6 @@ namespace GOLDEPUS.Bll.Monitoring
 {
     internal class PerformanceLog : Base.Base<Entity.Monitoring.PerformanceLog>
     {
-        public PerformanceLog(Entity.DBEngine.UnitOfWorks DataProcess) : base(DataProcess) { }
+        public PerformanceLog(Bll.Facede Application) : base(Application) { }
     }
 }

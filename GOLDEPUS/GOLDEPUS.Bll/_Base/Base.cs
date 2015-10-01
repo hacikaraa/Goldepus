@@ -5,29 +5,21 @@ namespace GOLDEPUS.Base
 {
     internal abstract class Base<T> where T : class
     {
-        private Bll.Facede bll;
-        public Bll.Facede Bll
+        public Bll.Facede Application { get; private set; }
+
+        public Base(Bll.Facede Application)
         {
-            get
-            {
-                if (bll == null) bll = new Bll.Facede(DataProcess);
-                return bll;
-            }
+            this.Application = Application;
         }
+
+        public Entity.DBEngine.UnitOfWorks DataProcess { get { return this.Application.DataProcess; } }
         
-        public Entity.DBEngine.UnitOfWorks DataProcess { get; private set; }
-
-        public Base(Entity.DBEngine.UnitOfWorks DataProcess)
-        {
-            this.DataProcess = DataProcess;
-        }
-
         private Entity.DBEngine.Repository<T> dbaction;
         public Entity.DBEngine.Repository<T> DBAction
         {
             get
             {
-                if (this.dbaction == null) this.dbaction = this.DataProcess.RepositoryFactory<T>();
+                if (this.dbaction == null) this.dbaction = this.Application.DataProcess.RepositoryFactory<T>();
                 return this.dbaction;
             }
         }
@@ -35,14 +27,15 @@ namespace GOLDEPUS.Base
         public void CreateExceptionLog(Exception ex)
         {
             Entity.Monitoring.ExceptionLog exlog = new Entity.Monitoring.ExceptionLog();
+            exlog.Exception = ex.ToString();
             exlog.ExceptionMessage = ex.Message;
+            exlog.InnerException = (ex.InnerException != null) ? ex.InnerException.ToString() : "NULL";
+            exlog.EntityValue = (ex.Data != null) ? ex.Data.ToString() : "NULL";
             exlog.ExecuteEntity = this.GetType().FullName;
-            exlog.EntityValue = "";
-            exlog.ExecuteType = "";
-            Bll.Monitoring.CreateExceptionLog(exlog);
+            exlog.ExecuteType = "BLL";
+            exlog.AccountId = (this.Application.DataProcess.HasSession) ? this.Application.DataProcess.ActiveUser.Id : 0;
+            Application.Monitoring.CreateExceptionLog(exlog);
         }
-
-
 
     }
 }

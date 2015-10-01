@@ -8,6 +8,6 @@ namespace GOLDEPUS.Bll.Finance
 {
     internal class CorporationExpenses : Base.Base<Entity.Finance.CorporationExpenses>
     {
-        public CorporationExpenses(Entity.DBEngine.UnitOfWorks DataProcess) : base(DataProcess) { }
+        public CorporationExpenses(Bll.Facede Application) : base(Application) { }
     }
 }

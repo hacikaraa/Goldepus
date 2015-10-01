@@ -10,9 +10,9 @@ namespace GOLDEPUS.Bll.User
     public class Facede
     {
         private Account account;
-        public Facede(Entity.DBEngine.UnitOfWorks DataProcess)
+        public Facede(Bll.Facede Application)
         {
-            account = new Account(DataProcess);
+            account = new Account(Application);
         }
         
         public ResultObject<Entity.User.Account> Login(string username,string password)
@@ -23,6 +23,11 @@ namespace GOLDEPUS.Bll.User
         public ResultObject<Entity.User.Account> Register(string userName, string password, string eMail, string name)
         {
             return this.account.Register(userName, MD5.MD5Create(password), eMail, name);
+        }
+
+        public void LogOut()
+        {
+            this.account.LogOut();
         }
 
     }

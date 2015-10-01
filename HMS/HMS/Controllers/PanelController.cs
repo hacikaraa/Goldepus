@@ -32,7 +32,7 @@ namespace HMS.Controllers
 
         public ActionResult HomeMembers()
         {
-
+            base.Bll.Framework.SaveCategory("GENEL");
 
             return View(new Models.HomeMembersModel());
         }
@@ -74,6 +74,7 @@ namespace HMS.Controllers
 
         public ActionResult Logout()
         {
+            
             Session.Abandon();
             return Redirect("/Home");
         }

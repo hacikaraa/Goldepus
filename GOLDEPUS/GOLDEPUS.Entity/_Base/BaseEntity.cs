@@ -30,5 +30,7 @@ namespace GOLDEPUS.Entity.Base
 
         public DateTime ModifiedDate { get; set; }
 
+        public virtual string GetEntityType { get { return "Entity"; } }
+
     }
 }

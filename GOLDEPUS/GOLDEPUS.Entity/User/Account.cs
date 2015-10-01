@@ -8,7 +8,7 @@ namespace GOLDEPUS.Entity.User
     [Table("Account")]
     public class Account : Base.BaseEntity
     {
-        [StringLength(32,MinimumLength = 16)]
+        [StringLength(32,MinimumLength = 4)]
         public string AccountName { get; set; }
 
         [StringLength(32)]
@@ -23,6 +23,8 @@ namespace GOLDEPUS.Entity.User
         public string PhoneNumber { get; set; }
 
         public string WebSite { get; set; }
+
+        public bool IsActive { get; set; }
 
         public virtual ICollection<Finance.MemberRevenues> MemberRevenues { get; set; }
 

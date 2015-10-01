@@ -12,10 +12,12 @@ namespace GOLDEPUS.Entity.DBEngine
     {
         private DataContext context;
         private DbSet<T> dbSet;
-        public Repository(DataContext Context)
+        private UnitOfWorks DataProcess;
+        public Repository(DataContext Context, UnitOfWorks DataProcess)
         {
             context = Context;
             dbSet = context.Set<T>();
+            this.DataProcess = DataProcess;
         }
 
         public virtual T FindById(object EntityId)
@@ -33,24 +35,38 @@ namespace GOLDEPUS.Entity.DBEngine
 
         public virtual void Insert(ref T entity)
         {
-            //Userlar için bir düzenleme yapılması gerekiyor.
-            //entity.GetType().GetProperty("UserModified").SetValue(entity, 1);
-            //entity.GetType().GetProperty("UserModified").SetValue(entity, 1);
-            if (entity.GetType().GetProperty("CreatedDate") != null)
+            if (entity.GetType().GetProperty("GetEntityType").GetValue(entity, new object[] { }).ToString().Equals("Entity"))
             {
+                if (this.DataProcess.HasSession)
+                {
+                    entity.GetType().GetProperty("UserCreated").SetValue(entity, this.DataProcess.ActiveUser.Id);
+                    entity.GetType().GetProperty("UserModified").SetValue(entity, this.DataProcess.ActiveUser.Id);
+                }
                 entity.GetType().GetProperty("CreatedDate").SetValue(entity, DateTime.Now);
                 entity.GetType().GetProperty("ModifiedDate").SetValue(entity, DateTime.Now);
             }
+            else if (entity.GetType().GetProperty("GetEntityType").GetValue(entity, new object[] { }).ToString().Equals("Log"))
+            {
+                entity.GetType().GetProperty("LogTime").SetValue(entity, DateTime.Now);
+                if (this.DataProcess.HasSession)
+                {
+                    entity.GetType().GetProperty("AccountId").SetValue(entity, this.DataProcess.ActiveUser.Id);
+                }
+            }
+
             dbSet.Add(entity);
         }
 
         public virtual void Update(ref T entityToUpdate)
         {
-            //Userlar için bir düzenleme yapılması gerekiyor.
-            //entity.GetType().GetProperty("UserModified").SetValue(entity, 1);
-            //entity.GetType().GetProperty("UserModified").SetValue(entity, 1);
-            if (entityToUpdate.GetType().GetProperty("ModifiedDate") != null)
+            if (entityToUpdate.GetType().GetProperty("GetEntityType").GetValue(entityToUpdate, new object[] { }).ToString().Equals("Entity"))
+            {
+                if (this.DataProcess.HasSession)
+                {
+                    entityToUpdate.GetType().GetProperty("UserModified").SetValue(entityToUpdate, this.DataProcess.ActiveUser.Id);
+                }
                 entityToUpdate.GetType().GetProperty("ModifiedDate").SetValue(entityToUpdate, DateTime.Now);
+            }
 
             dbSet.Attach(entityToUpdate);
             context.Entry(entityToUpdate).State = EntityState.Modified;

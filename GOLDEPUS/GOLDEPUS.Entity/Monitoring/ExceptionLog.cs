@@ -12,5 +12,7 @@ namespace GOLDEPUS.Entity.Monitoring
         public string ExceptionCode { get; set; }
 
         public string Exception { get; set; }
+
+        public string InnerException { get; set; }
     }
 }

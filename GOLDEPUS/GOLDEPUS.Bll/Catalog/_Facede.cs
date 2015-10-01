@@ -14,14 +14,14 @@ namespace GOLDEPUS.Bll.Catalog
         private ListColumn listColumn;
         private ListItem listItem;
         private MemberList memberList;
-        public Facede(Entity.DBEngine.UnitOfWorks DataProcess)
+        public Facede(Bll.Facede Application)
         {
-            column = new Column(DataProcess);
-            corporationList = new CorporationList(DataProcess);
-            list = new List(DataProcess);
-            listColumn = new ListColumn(DataProcess);
-            listItem = new ListItem(DataProcess);
-            memberList = new MemberList(DataProcess);
+            column = new Column(Application);
+            corporationList = new CorporationList(Application);
+            list = new List(Application);
+            listColumn = new ListColumn(Application);
+            listItem = new ListItem(Application);
+            memberList = new MemberList(Application);
         }
     }
 }
