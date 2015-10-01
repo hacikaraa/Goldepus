@@ -80,6 +80,7 @@
     <Compile Include="Controllers\ErrorsController.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerSide\CacheManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

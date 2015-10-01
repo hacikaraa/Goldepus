@@ -19,14 +19,14 @@ namespace GOLDEPUS.MVC.Controllers
             {
                 if (bll == null)
                 {
-                    if (HttpContext.Cache.Get("Application") != null)
+                    if (ServerSide.CacheManager.HasObject("Application"))
                     {
-                        bll = (GOLDEPUS.Bll.Facede)HttpContext.Cache.Get("Application");
+                        bll = (GOLDEPUS.Bll.Facede)ServerSide.CacheManager.GetObject("Application");
                     }
                     else
                     {
                         bll = new GOLDEPUS.Bll.Facede();
-                        HttpContext.Cache.Insert("Application", bll);
+                        ServerSide.CacheManager.Add("Application", bll);
                     }
                 } 
                 return bll;

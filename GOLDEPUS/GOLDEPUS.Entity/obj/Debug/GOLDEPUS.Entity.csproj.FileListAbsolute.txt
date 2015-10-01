@@ -14,3 +14,4 @@ C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Entity\obj\Debug\GOLDEPUS.Entity.Migrations.In
 C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Entity\obj\Debug\GOLDEPUS.Entity.csproj.GenerateResource.Cache
 C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Entity\obj\Debug\GOLDEPUS.Entity.dll
 C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Entity\obj\Debug\GOLDEPUS.Entity.pdb
+C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Entity\obj\Debug\GOLDEPUS.Entity.csprojResolveAssemblyReference.cache
