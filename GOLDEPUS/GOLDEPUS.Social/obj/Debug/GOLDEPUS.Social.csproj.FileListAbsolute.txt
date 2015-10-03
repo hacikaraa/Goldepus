@@ -8,3 +8,7 @@ C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Social\bin\Debug\GOLDEPUS.Social.pdb
 C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Social\obj\Debug\GOLDEPUS.Social.dll
 C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Social\obj\Debug\GOLDEPUS.Social.pdb
 C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Social\obj\Debug\GOLDEPUS.Social.csprojResolveAssemblyReference.cache
+C:\Users\SevketYilmaz\Source\Repos\Goldepus\GOLDEPUS\GOLDEPUS.Social\bin\Debug\GOLDEPUS.Social.dll
+C:\Users\SevketYilmaz\Source\Repos\Goldepus\GOLDEPUS\GOLDEPUS.Social\bin\Debug\GOLDEPUS.Social.pdb
+C:\Users\SevketYilmaz\Source\Repos\Goldepus\GOLDEPUS\GOLDEPUS.Social\obj\Debug\GOLDEPUS.Social.dll
+C:\Users\SevketYilmaz\Source\Repos\Goldepus\GOLDEPUS\GOLDEPUS.Social\obj\Debug\GOLDEPUS.Social.pdb

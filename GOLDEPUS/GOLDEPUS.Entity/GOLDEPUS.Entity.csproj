@@ -82,11 +82,11 @@
     <Compile Include="Marketing\ItemGroups.cs" />
     <Compile Include="Marketing\ItemImages.cs" />
     <Compile Include="Marketing\ItemProperties.cs" />
-    <Compile Include="_Migrations\201509301958141_InitialCreate.cs" />
-    <Compile Include="_Migrations\201509301958141_InitialCreate.Designer.cs">
+    <Compile Include="Migrations\201509301958141_InitialCreate.cs" />
+    <Compile Include="Migrations\201509301958141_InitialCreate.Designer.cs">
       <DependentUpon>201509301958141_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="_Migrations\Configuration.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Monitoring\ExceptionLog.cs" />
     <Compile Include="Monitoring\ExecuteLog.cs" />
     <Compile Include="Monitoring\PerformanceLog.cs" />
@@ -112,7 +112,7 @@
     <Content Include="_Dll\Newtonsoft.Json.dll" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="_Migrations\201509301958141_InitialCreate.resx">
+    <EmbeddedResource Include="Migrations\201509301958141_InitialCreate.resx">
       <DependentUpon>201509301958141_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

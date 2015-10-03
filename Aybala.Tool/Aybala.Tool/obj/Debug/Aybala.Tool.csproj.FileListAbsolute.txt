@@ -20,3 +20,11 @@ C:\GIT\GOLDEPUS\Aybala.Tool\Aybala.Tool\obj\Debug\Aybala.Tool.csprojResolveAssem
 C:\GIT\GOLDEPUS\Aybala.Tool\Aybala.Tool\obj\Debug\Aybala.Tool.csproj.ResolveComReference.cache
 C:\GIT\GOLDEPUS\Aybala.Tool\Aybala.Tool\obj\Debug\Aybala.Tool.dll
 C:\GIT\GOLDEPUS\Aybala.Tool\Aybala.Tool\obj\Debug\Aybala.Tool.pdb
+C:\Users\SevketYilmaz\Source\Repos\Goldepus\Aybala.Tool\Aybala.Tool\obj\Debug\Aybala.Tool.csprojResolveAssemblyReference.cache
+C:\Users\SevketYilmaz\Source\Repos\Goldepus\Aybala.Tool\Aybala.Tool\obj\Debug\Aybala.Tool.csproj.ResolveComReference.cache
+C:\Users\SevketYilmaz\Source\Repos\Goldepus\Aybala.Tool\Aybala.Tool\bin\Debug\Aybala.Tool.dll
+C:\Users\SevketYilmaz\Source\Repos\Goldepus\Aybala.Tool\Aybala.Tool\bin\Debug\Aybala.Tool.pdb
+C:\Users\SevketYilmaz\Source\Repos\Goldepus\Aybala.Tool\Aybala.Tool\bin\Debug\Newtonsoft.Json.dll
+C:\Users\SevketYilmaz\Source\Repos\Goldepus\Aybala.Tool\Aybala.Tool\bin\Debug\Newtonsoft.Json.xml
+C:\Users\SevketYilmaz\Source\Repos\Goldepus\Aybala.Tool\Aybala.Tool\obj\Debug\Aybala.Tool.dll
+C:\Users\SevketYilmaz\Source\Repos\Goldepus\Aybala.Tool\Aybala.Tool\obj\Debug\Aybala.Tool.pdb

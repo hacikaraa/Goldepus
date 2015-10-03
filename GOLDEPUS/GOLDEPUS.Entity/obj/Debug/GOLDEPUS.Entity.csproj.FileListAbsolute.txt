@@ -15,3 +15,12 @@ C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Entity\obj\Debug\GOLDEPUS.Entity.csproj.Genera
 C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Entity\obj\Debug\GOLDEPUS.Entity.dll
 C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Entity\obj\Debug\GOLDEPUS.Entity.pdb
 C:\GIT\GOLDEPUS\GOLDEPUS\GOLDEPUS.Entity\obj\Debug\GOLDEPUS.Entity.csprojResolveAssemblyReference.cache
+C:\Users\SevketYilmaz\Source\Repos\Goldepus\GOLDEPUS\GOLDEPUS.Entity\bin\Debug\GOLDEPUS.Entity.dll.config
+C:\Users\SevketYilmaz\Source\Repos\Goldepus\GOLDEPUS\GOLDEPUS.Entity\bin\Debug\GOLDEPUS.Entity.dll
+C:\Users\SevketYilmaz\Source\Repos\Goldepus\GOLDEPUS\GOLDEPUS.Entity\bin\Debug\GOLDEPUS.Entity.pdb
+C:\Users\SevketYilmaz\Source\Repos\Goldepus\GOLDEPUS\GOLDEPUS.Entity\bin\Debug\EntityFramework.dll
+C:\Users\SevketYilmaz\Source\Repos\Goldepus\GOLDEPUS\GOLDEPUS.Entity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\SevketYilmaz\Source\Repos\Goldepus\GOLDEPUS\GOLDEPUS.Entity\obj\Debug\GOLDEPUS.Entity.Migrations.InitialCreate.resources
+C:\Users\SevketYilmaz\Source\Repos\Goldepus\GOLDEPUS\GOLDEPUS.Entity\obj\Debug\GOLDEPUS.Entity.csproj.GenerateResource.Cache
+C:\Users\SevketYilmaz\Source\Repos\Goldepus\GOLDEPUS\GOLDEPUS.Entity\obj\Debug\GOLDEPUS.Entity.dll
+C:\Users\SevketYilmaz\Source\Repos\Goldepus\GOLDEPUS\GOLDEPUS.Entity\obj\Debug\GOLDEPUS.Entity.pdb

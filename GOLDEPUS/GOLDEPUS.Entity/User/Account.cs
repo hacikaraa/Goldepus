@@ -22,8 +22,6 @@ namespace GOLDEPUS.Entity.User
 
         public string PhoneNumber { get; set; }
 
-        public string WebSite { get; set; }
-
         public bool IsActive { get; set; }
 
         public virtual ICollection<Finance.MemberRevenues> MemberRevenues { get; set; }
